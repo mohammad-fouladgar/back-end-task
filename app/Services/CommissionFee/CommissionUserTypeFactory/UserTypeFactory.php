@@ -9,7 +9,6 @@ use Illuminate\Foundation\Application;
 
 class UserTypeFactory
 {
-
     public function __construct(protected Application $app)
     {
     }

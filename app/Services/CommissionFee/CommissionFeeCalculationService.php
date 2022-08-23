@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Services\CommissionFee;
 
 use App\Services\CommissionFee\CommissionOperationStrategy\CommissionOperationContext;
+use ReflectionException;
 
 class CommissionFeeCalculationService
 {
@@ -13,7 +14,7 @@ class CommissionFeeCalculationService
     }
 
     /**
-     * @throws Exceptions\CommissionOperationException|\ReflectionException
+     * @throws Exceptions\CommissionOperationException|ReflectionException
      */
     public function calculate(CommissionFeePayload $commissionFeePayload): string
     {

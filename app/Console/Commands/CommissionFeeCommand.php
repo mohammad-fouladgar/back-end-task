@@ -33,6 +33,7 @@ class CommissionFeeCommand extends Command
 
                 return 1;
             }
+
             while ($row = fgetcsv($handle, 1000)) {
                 $commissionFeePayload = new CommissionFeePayload($row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
                 $this->info($commissionFeeCalculationService->calculate($commissionFeePayload));

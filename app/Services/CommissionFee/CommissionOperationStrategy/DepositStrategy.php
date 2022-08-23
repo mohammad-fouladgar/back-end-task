@@ -8,6 +8,6 @@ class DepositStrategy implements CommissionOperationStrategyInterface
 {
     public function handle(CommissionFeePayload $commissionFeePayload): string
     {
-        return ($commissionFeePayload->getAmount() * 0.3) / 100;
+        return ceil($commissionFeePayload->getAmount() * 0.03) / 100;
     }
 }
